@@ -1,0 +1,55 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.55.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 3551d0b04ad708cb78a63d1f2d6f55e7bc7389e0 Build.PL
+SHA1 68c7458492982d69931e7f84efdab1af383a7de4 Changes
+SHA1 4175690a673ef698c44c840c6b209fd237341ac4 MANIFEST
+SHA1 53bdb7441dbf19c3db8f36ff9bfcb65400592193 MANIFEST.SKIP
+SHA1 591703ad42385dd2603f2182bdd6c1cf9c3728b1 META.yml
+SHA1 a41b1bb5c1b70bde2b8878bea38f84373d69538d Makefile.PL
+SHA1 95975135ad130e57221ed6cea311be0360e390e0 README
+SHA1 bd9678da9ac809c97cfc8a0a24b0704616e3bbc4 lib/Module/Starter/Plugin/CGIApp.pm
+SHA1 9d88d47efd3d1c4888a29af1d3517d95a21eb99b lib/Module/Starter/Plugin/CGIApp/templates/00-signature.t
+SHA1 042f60d62db0cc251262c0c1c92b76ba7aa4df0e lib/Module/Starter/Plugin/CGIApp/templates/01-load.t
+SHA1 87d8b44004fe377118338eb9288030472de7785c lib/Module/Starter/Plugin/CGIApp/templates/Build.PL
+SHA1 91087ccb4525b5af4d168f946c7bb7878abb2ea2 lib/Module/Starter/Plugin/CGIApp/templates/Changes
+SHA1 80de39ff12248eb03cdc3a1d0701a66d94cd43fe lib/Module/Starter/Plugin/CGIApp/templates/MANIFEST
+SHA1 53bdb7441dbf19c3db8f36ff9bfcb65400592193 lib/Module/Starter/Plugin/CGIApp/templates/MANIFEST.SKIP
+SHA1 26ed61677615a94ebe5113eb5497fcac3c07ede8 lib/Module/Starter/Plugin/CGIApp/templates/MI_Makefile.PL
+SHA1 4deb022866b7a951eadea60f1bcbc41d2dad1321 lib/Module/Starter/Plugin/CGIApp/templates/Makefile.PL
+SHA1 82179cfa726ee0a11c34ee91a5731fc7d3cd4b2c lib/Module/Starter/Plugin/CGIApp/templates/Module.pm
+SHA1 d7adca194ef15b824d8b4e0758e561038d84b058 lib/Module/Starter/Plugin/CGIApp/templates/README
+SHA1 6e2ad9e9be89f5f2552939ef35cbf7bafab039fb lib/Module/Starter/Plugin/CGIApp/templates/boilerplate.t
+SHA1 6620d5391d0b624162eacd49ce37f8645a053899 lib/Module/Starter/Plugin/CGIApp/templates/cvsignore
+SHA1 c63a748acaa21a7857b2f1142a5785ede323e28a lib/Module/Starter/Plugin/CGIApp/templates/perl-critic.t
+SHA1 d171416aca8c8f684661689f43ecca299064b2bc lib/Module/Starter/Plugin/CGIApp/templates/perlcriticrc
+SHA1 18ea5d50114e558990afc4546bbe21ea06a95b09 lib/Module/Starter/Plugin/CGIApp/templates/pod-coverage.t
+SHA1 efb0dc86b16fd2a77aca6ecdce234c3f1f77bf20 lib/Module/Starter/Plugin/CGIApp/templates/pod.t
+SHA1 d63e698e19b436569a4bb12343e59f9d85d34cc2 lib/Module/Starter/Plugin/CGIApp/templates/runmode1.html
+SHA1 5a941b1cc2e61219b95ea9e810dec8c3750877f9 lib/Module/Starter/Plugin/CGIApp/templates/test-app.t
+SHA1 de83e89e0ec2af2a104314653bf77bc4d6bebf3b t/00-signature.t
+SHA1 4b7a1cc88b138d52d011a911cb2691066622199e t/01-load.t
+SHA1 12ebfe570bf101d71698baf40b55158d99534c08 t/perl-critic.t
+SHA1 d171416aca8c8f684661689f43ecca299064b2bc t/perlcriticrc
+SHA1 b549de1f82f1fe054525c00535f5149dbeb8e593 t/pod-coverage.t
+SHA1 25883780263ca09fbef72e88876d3e7be89f0cca t/pod.t
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.6 (GNU/Linux)
+
+iD8DBQFH5mN8IN9eM6kfjroRAlkBAJ4jCJKhK/p8G1b6fHg5d/mut4yv3wCeIDtc
+YiZP0aV4aJgMtJYp9hB/MmI=
+=IDnn
+-----END PGP SIGNATURE-----
