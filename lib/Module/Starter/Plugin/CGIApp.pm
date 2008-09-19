@@ -1,4 +1,4 @@
-# $Id: /svn/Module-Starter-Plugin-CGIApp/trunk/lib/Module/Starter/Plugin/CGIApp.pm 315 2008-03-23T13:38:20.082716Z jaldhar  $
+# $Id: CGIApp.pm 24 2008-09-18 20:25:17Z jaldhar $
 
 =head1 NAME
 
@@ -36,17 +36,21 @@ use HTML::Template;
 
 =head1 VERSION
 
-Version 0.01
+Version 0.05
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.05';
 
 =head1 DESCRIPTION
 
 This module subclasses L<Module::Starter::Plugin::Template> which in turn 
 subclasses L<Module::Starter::Simple>. This document only describes the methods
 which are overriden from those modules or are new.
+
+Only developers looking to extend this module need to read this. If you just 
+want to use L<Module::Starter::Plugin::CGIApp>, read the docs for 
+L<cgiapp-starter> or L<titanium-starter> instead.
 
 =head1 METHODS
 
@@ -117,7 +121,6 @@ sub create_distro {
 
     push @files, $self->create_t(@modules);
     push @files, $self->create_tmpl();
-    push @files, $self->create_cvsignore;
     my %build_results = $self->create_build();
     push @files, @{ $build_results{files} };
 
@@ -125,6 +128,7 @@ sub create_distro {
     push @files, $self->create_README( $build_results{instructions} );
     push @files, $self->create_MANIFEST_SKIP;
     push @files, $self->create_perlcriticrc;
+    push @files, $self->create_server_pl;
     push @files, 'MANIFEST';
     $self->create_MANIFEST( grep { $_ ne 't/boilerplate.t' } @files );
 
@@ -173,6 +177,22 @@ sub create_perlcriticrc {
     return 't/perlcriticrc';
 }
 
+=head2 create_server_pl( )
+
+This method creates C<server.pl> in the distribution's root directory.
+
+=cut
+
+sub create_server_pl {
+    my $self = shift;
+
+    my $fname = File::Spec->catfile( $self->{basedir}, 'server.pl' );
+    $self->create_file( $fname, $self->server_pl_guts() );
+    $self->progress("Created $fname");
+                                                    
+    return 'server.pl';
+}
+
 =head2 create_tmpl( )
 
 This method takes all the template files ending in .html (representing 
@@ -196,10 +216,27 @@ This method is subclassed from L<Module::Starter::Plugin::Template>.
 
 It is given an L<HTML::Template> and options and returns the resulting document.
 
-Data in the C<Module::Starter> object which represents an array is transformed
-into an array of hashes with one key called C<$data_item> in order to make it
-usable in an L<HTML::Template> C<TMPL_LOOP>.
+Data in the C<Module::Starter> object which represents a reference to an array 
+@foo is transformed into an array of hashes with one key called 
+C<$foo_item> in order to make it usable in an L<HTML::Template> C<TMPL_LOOP>.
+For example:
 
+    $data = ['a'. 'b', 'c'];
+
+would become:
+
+    $data = [
+        { data_item => 'a' },
+        { data_item => 'b' },
+        { data_item => 'c' },
+    ];
+    
+so that in the template you could say:
+
+    <tmpl_loop data>
+        <tmpl_var data_item>
+    </tmpl_loop>
+    
 =cut
 
 sub render {
@@ -328,17 +365,18 @@ sub perlcriticrc_guts {
     return $self->render( $template, \%options );
 }
 
-=head2 cvsignore_guts
+=head2 server_pl_guts
 
-Implements the creation of a C<.cvsignore> file.
+Implements the creation of a C<server.pl> file.
 
 =cut
 
-sub cvsignore_guts {
+sub server_pl_guts {
     my $self = shift;
     my %options;
-
-    my $template = $self->{templates}{cvsignore};
+    $options{main_module} = $self->{main_module};
+    
+    my $template = $self->{templates}{'server.pl'};
     return $self->render( $template, \%options );
 }
 
@@ -418,8 +456,9 @@ under the same terms as Perl itself.
 
 =head1 SEE ALSO
 
-L<module-starter>, L<Module::Starter>, L<Module::Starter::Simple>, 
-L<Module::Starter::Plugin::Template>. L<CGI::Application>, L<HTML::Template>
+L<cgiapp-starter>, L<titanium-starter>, L<Module::Starter>, 
+L<Module::Starter::Simple>, L<Module::Starter::Plugin::Template>. 
+L<CGI::Application>, L<Titanium>, L<HTML::Template>
 
 =cut
 

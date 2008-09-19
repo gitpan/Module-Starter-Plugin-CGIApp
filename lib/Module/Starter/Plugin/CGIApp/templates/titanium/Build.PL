@@ -24,7 +24,7 @@ my $builder = Module::Build->new(
         return \%tmpls;
     },
     build_requires => {
-        'CGI::Application'              => 4.04,
+        'Titanium'                      => 0,
         'File::Find'                    => 0,      
         'HTML::Template'                => 0,
         'Pod::Coverage'                 => 0.18,
@@ -35,7 +35,7 @@ my $builder = Module::Build->new(
         'Test::WWW::Mechanize::CGIApp'  => 0,
     },
     requires => {
-        'CGI::Application'              => 4.04,
+        'Titanium'                      => 0,
         'File::Find'                    => 0,      
         'HTML::Template'                => 0,
     },

@@ -1,5 +1,5 @@
 #
-# $Id: /svn/Module-Starter-Plugin-CGIApp/trunk/Build.PL 315 2008-03-23T13:38:20.082716Z jaldhar  $
+# $Id: Build.PL 22 2008-09-18 20:12:37Z jaldhar $
 #
 use strict;
 use warnings;
@@ -43,6 +43,11 @@ my $builder = $subclass->new(
     },
     PL_files            => {
         'lib/Module/Starter/Plugin/CGIApp/templates/Makefile.PL' => [],
+        'lib/Module/Starter/Plugin/CGIApp/templates/titanium/Makefile.PL' => [],
+    },
+    script_files            => {
+        'script/cgiapp-starter' => [],
+        'script/titanium-starter' => [],
     },
     tmpl_files          => eval { 
         my %tmpls; File::Find::find(

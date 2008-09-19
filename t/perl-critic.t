@@ -1,6 +1,6 @@
 #!perl -T
 #
-# $Id: /svn/Module-Starter-Plugin-CGIApp/trunk/t/perl-critic.t 315 2008-03-23T13:38:20.082716Z jaldhar  $
+# $Id: perl-critic.t 1 2008-03-23 13:38:20Z jaldhar $
 #
 use strict;
 use warnings;

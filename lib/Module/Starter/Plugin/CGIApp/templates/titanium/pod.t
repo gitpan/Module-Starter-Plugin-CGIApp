@@ -1,6 +1,6 @@
 #!perl -T
 #
-# $Id: pod.t 1 2008-03-23 13:38:20Z jaldhar $
+# $Id$
 #
 use strict;
 use warnings;

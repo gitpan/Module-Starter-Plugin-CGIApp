@@ -1,6 +1,6 @@
 #!perl -T
 #
-# $Id: /svn/Module-Starter-Plugin-CGIApp/trunk/t/01-load.t 315 2008-03-23T13:38:20.082716Z jaldhar  $
+# $Id: 01-load.t 1 2008-03-23 13:38:20Z jaldhar $
 #
 use warnings;
 use strict;

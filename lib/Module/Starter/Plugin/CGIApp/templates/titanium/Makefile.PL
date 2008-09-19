@@ -12,7 +12,7 @@ WriteMakefile(
     ABSTRACT_FROM       => '<tmpl_var main_pm_file>',
     PL_FILES            => {},
     PREREQ_PM => {
-        'CGI::Application'              => 4.04,
+        'Titanium'                      => 0,
         'File::Find'                    => 0,
         'HTML::Template'                => 0,
         'Pod::Coverage'                 => 0.18,

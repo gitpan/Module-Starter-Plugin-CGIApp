@@ -1,6 +1,6 @@
 #!perl
 #
-# $Id: 00-signature.t 4 2008-03-23 13:59:14Z jaldhar $
+# $Id$
 #
 use warnings;
 use strict;
