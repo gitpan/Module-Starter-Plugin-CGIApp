@@ -1,5 +1,5 @@
 #
-# $Id: Build.PL 22 2008-09-18 20:12:37Z jaldhar $
+# $Id: Build.PL 36 2008-09-19 12:53:22Z jaldhar $
 #
 use strict;
 use warnings;
@@ -68,7 +68,6 @@ my $builder = $subclass->new(
         'Module::Signature'     => 0,
         'Pod::Coverage'         => 0.18,
         'Pod::Usage'            => 0,
-        'Test::Builder'         => 0,
         'Test::More'            => 0,
         'Test::Pod'             => 1.22,
         'Test::Pod::Coverage'   => 1.08,

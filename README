@@ -1,8 +1,8 @@
 Module-Starter-Plugin-CGIApp
 
-This is a plugin for Module::Starter that builds you a skeleton CGI::Application
-module with all the extra files needed to package it for CPAN. You can customize 
-the output using HTML::Template.
+This is a plugin for Module::Starter that builds you a skeleton 
+CGI::Application module with all the extra files needed to package it for 
+CPAN. You can customize the output using HTML::Template.
 
 INSTALLATION
 
@@ -10,13 +10,31 @@ If you have the Module::Signature module installed, you can verify the
 integrity of this distribution by typing:
 
     cpansign -v
+
+Module::Signature requires GnuPG which you can get from: 
+http://www.gnupg.org/download/
+A binary version for Windows is available from that page.
         
 Then to install this module, run the following commands:
+
+    perl Build.pl
+    ./Build
+    ./Build test
+    ./Build install
+    
+On Windows you don't need to type the preliminary ./
+
+Alternatively, you can do:
 
     perl Makefile.PL
     make
     make test
     make install
+
+If you are using Windows and you don't have a make utility, you can download 
+nmake from:
+http://download.microsoft.com/download/vc15/patch/1.52/w95/en-us/nmake15.exe
+(Replace make with nmake in the instructions above if you are using it.)
 
 DEPENDENCIES
 
@@ -29,10 +47,10 @@ At build time you will need the above modules plus the following if you want
 to run all the tests
 
 Module-Signature
-Test-Builder
 Test-Pod 1.22
 Test-Pod-Coverage 1.04
-Test-Perl-Critic (This test will only run if the env var TEST_AUTHOR = 1)
+Test-Perl-Critic (This test will only run if the env var TEST_AUTHOR has a 
+                  true value)
 
 They are all available on CPAN (http://www.cpan.org)
 
@@ -65,4 +83,4 @@ Copyright (C) 2008,  Consolidated Braincells Inc. All Rights Reserved.
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
 
-$Id: README 7 2008-04-01 06:42:38Z jaldhar $
+$Id: README 49 2009-01-05 11:52:15Z jaldhar $
