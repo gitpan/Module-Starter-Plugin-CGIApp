@@ -1,6 +1,6 @@
-#!perl -T
+#!perl
 #
-# $Id$
+# $Id: module-build.t 61 2009-01-09 23:24:04Z jaldhar $
 #
 use warnings;
 use strict;
@@ -33,9 +33,7 @@ foreach my $file (@expected_files) {
 }
 
 File::Find::find(
-    {   untaint => 1,
-        untaint_pattern => $filespec,
-        no_chdir => 1,
+    {   no_chdir => 1,
         wanted  => sub {
             if ( -e $File::Find::name ) {
                 my $name = $File::Find::name;

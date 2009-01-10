@@ -1,4 +1,4 @@
-# $Id: CGIApp.pm 50 2009-01-05 22:27:28Z jaldhar $
+# $Id: CGIApp.pm 62 2009-01-09 23:28:39Z jaldhar $
 
 =head1 NAME
 
@@ -36,11 +36,11 @@ use HTML::Template;
 
 =head1 VERSION
 
-Version 0.07
+Version 0.08
 
 =cut
 
-our $VERSION = '0.07';
+our $VERSION = '0.08';
 
 =head1 DESCRIPTION
 
