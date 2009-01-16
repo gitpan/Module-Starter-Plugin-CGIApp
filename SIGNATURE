@@ -15,19 +15,19 @@ not run its Makefile.PL or Build.PL.
 Hash: SHA1
 
 SHA1 21ce4367da4dd000486eab4c555b3a6d4c56de99 Build.PL
-SHA1 1717e343758d44ba7edc2b01b47cee2c33bab388 Changes
+SHA1 b87bb7a0dd22251cfbd7f627b9bb51336da298b7 Changes
 SHA1 1dd815809b74748d87c57c6ecbafd1c969a37391 MANIFEST
 SHA1 cab65523e7428de1d374c56bcbb27696a579f9bd MANIFEST.SKIP
-SHA1 3bcdda2f4553374dc181120592ace368fd39fe29 META.yml
-SHA1 995fad7b0544908e3e76742187e358e7cf8e481f Makefile.PL
-SHA1 59e1b71bcaf7a1f66cbb43cf2a3ca83ff748cd6a README
-SHA1 46235c4ed01c875d104a98034c18dc66fe087eea lib/Module/Starter/Plugin/CGIApp.pm
+SHA1 246361df30ad36a2cf603ca354ff8fabfd57612e META.yml
+SHA1 103106afa39872ea64cef293c383ff6a194b3dfd Makefile.PL
+SHA1 1e7368f86ce7b13f085e4058ecaae4d625c0cda4 README
+SHA1 b1e08989552717796030a2c77c81d51e33785f76 lib/Module/Starter/Plugin/CGIApp.pm
 SHA1 a1f254731cd05e47db1e498aac120824b76e03c7 lib/Module/Starter/Plugin/CGIApp/templates/00-signature.t
 SHA1 4fcff0fcd0d1dd97286680cc4a36ef488a3434b7 lib/Module/Starter/Plugin/CGIApp/templates/01-load.t
 SHA1 2e00b51213cb67c3fee2ef1dc7e93a0c3d701339 lib/Module/Starter/Plugin/CGIApp/templates/Build.PL
 SHA1 91087ccb4525b5af4d168f946c7bb7878abb2ea2 lib/Module/Starter/Plugin/CGIApp/templates/Changes
 SHA1 80de39ff12248eb03cdc3a1d0701a66d94cd43fe lib/Module/Starter/Plugin/CGIApp/templates/MANIFEST
-SHA1 53bdb7441dbf19c3db8f36ff9bfcb65400592193 lib/Module/Starter/Plugin/CGIApp/templates/MANIFEST.SKIP
+SHA1 cab65523e7428de1d374c56bcbb27696a579f9bd lib/Module/Starter/Plugin/CGIApp/templates/MANIFEST.SKIP
 SHA1 3b717d2a63835f55ce026ff28b06b6064837d755 lib/Module/Starter/Plugin/CGIApp/templates/MI_Makefile.PL
 SHA1 e73184a6420875e5c41427239e54f1c1426ab82e lib/Module/Starter/Plugin/CGIApp/templates/Makefile.PL
 SHA1 d456e6a756b7f38734a35bba14c809362aaa4d2a lib/Module/Starter/Plugin/CGIApp/templates/Module.pm
@@ -45,7 +45,7 @@ SHA1 4fcff0fcd0d1dd97286680cc4a36ef488a3434b7 lib/Module/Starter/Plugin/CGIApp/t
 SHA1 c8dab4c8c7ed3f18af84242cca05967f61c16568 lib/Module/Starter/Plugin/CGIApp/templates/titanium/Build.PL
 SHA1 91087ccb4525b5af4d168f946c7bb7878abb2ea2 lib/Module/Starter/Plugin/CGIApp/templates/titanium/Changes
 SHA1 80de39ff12248eb03cdc3a1d0701a66d94cd43fe lib/Module/Starter/Plugin/CGIApp/templates/titanium/MANIFEST
-SHA1 53bdb7441dbf19c3db8f36ff9bfcb65400592193 lib/Module/Starter/Plugin/CGIApp/templates/titanium/MANIFEST.SKIP
+SHA1 cab65523e7428de1d374c56bcbb27696a579f9bd lib/Module/Starter/Plugin/CGIApp/templates/titanium/MANIFEST.SKIP
 SHA1 576baf21e40e576b15dd3f7c5accf204e650a843 lib/Module/Starter/Plugin/CGIApp/templates/titanium/MI_Makefile.PL
 SHA1 1f22777a4dee38f8d028aa73ef05e041572c3cf0 lib/Module/Starter/Plugin/CGIApp/templates/titanium/Makefile.PL
 SHA1 4ebf6aa9de0d3c78cbdf338d5a9b27c29d3561da lib/Module/Starter/Plugin/CGIApp/templates/titanium/Module.pm
@@ -58,14 +58,14 @@ SHA1 9b0bb06e582bc037cbd6f4b1484dc017ba3dabce lib/Module/Starter/Plugin/CGIApp/t
 SHA1 d63e698e19b436569a4bb12343e59f9d85d34cc2 lib/Module/Starter/Plugin/CGIApp/templates/titanium/runmode1.html
 SHA1 97447e10236d56d6396e3f069247062a5bad7f36 lib/Module/Starter/Plugin/CGIApp/templates/titanium/server.pl
 SHA1 4e1f9535ec2ed6c280397359bc7b88187c12c61e lib/Module/Starter/Plugin/CGIApp/templates/titanium/test-app.t
-SHA1 745f23e4a93c9ffafe32422007370fef8b53788a script/cgiapp-starter
-SHA1 2dd06411575b423eeaf5cfdb9eb51a0cf72bf538 script/titanium-starter
+SHA1 54fff0170b7cb87c09584a3b6fb9aca1027862a0 script/cgiapp-starter
+SHA1 23f2154d77ffc64a99bedb34688d0159213d30c1 script/titanium-starter
 SHA1 8ccd73a1539a66b85237f31ee916d75ed1346a68 t/00-signature.t
 SHA1 6097ead4fde60253c372e6ddc5b0cad5c0b9abc6 t/01-load.t
-SHA1 df9771acc09baf8f8645ebaa2eea8a9879b86713 t/common.pm
-SHA1 662706d5dd19da20c93fd5abf71561f7e67e2d22 t/extutils-makemaker.t
-SHA1 b116d00d0af2efa228f068ad1e4010bbcc0d31dc t/module-build.t
-SHA1 2881041c8e9ddafd61596834bd7a6edaed0d3c96 t/module-install.t
+SHA1 010a3db12a000b6be0e2a3615896143a8354bfdf t/common.pm
+SHA1 66c89c0c9c522c093d441de9aaf7c1a764f7e1b1 t/extutils-makemaker.t
+SHA1 a370095b2ae9b1ee5374599816fb80ee30e3c471 t/module-build.t
+SHA1 b4dd46293296881b8c49827bd26455a8137ec22a t/module-install.t
 SHA1 db227ee9c782037c51471dbf5b37e2e2181364ba t/perl-critic.t
 SHA1 d171416aca8c8f684661689f43ecca299064b2bc t/perlcriticrc
 SHA1 e99ddd41ef380e2d12fbe1d89ced3fe66b181bda t/pod-coverage.t
@@ -73,7 +73,7 @@ SHA1 9a1e57068c710e5b68eaf5146645dc8891bc1e91 t/pod.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.9 (GNU/Linux)
 
-iD8DBQFJZ+2+IN9eM6kfjroRAl6cAJkBLfhDlBBRXAaD1G0cuHy34M+13ACgpwVj
-hZKzS5jdinlQaZ0nbVUSzu0=
-=eLW3
+iD8DBQFJb+40IN9eM6kfjroRAiIzAKDZkce64l87rL6ybReTPuv9EtqJ1wCfVvOo
+PAAskmmPh0Z7vHO3PMW8J6Q=
+=BrX7
 -----END PGP SIGNATURE-----
