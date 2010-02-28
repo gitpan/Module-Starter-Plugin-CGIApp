@@ -1,7 +1,7 @@
-#!perl -T
-#
-# $Id: boilerplate.t 52 2009-01-06 03:22:31Z jaldhar $
-#
+#!/usr/bin/perl
+
+# Some tests to make sure you are not using default placeholders from the
+# templates.  Remove this file after you have customized the distribution.
 use strict;
 use warnings;
 use English qw( -no_match_vars );
@@ -44,6 +44,10 @@ sub module_boilerplate_ok {
     );
     return;
 }
+
+not_in_file_ok(
+    LICENSE => 'License terms' => qr/Insert license text here./mx,
+);
 
 not_in_file_ok(
     README => 'The README is used...' => qr/The README is used/mx,

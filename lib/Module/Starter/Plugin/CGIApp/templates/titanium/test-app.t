@@ -1,7 +1,6 @@
-#!perl -T
-#
-# $Id: test-app.t 52 2009-01-06 03:22:31Z jaldhar $
-#
+#!/usr/bin/perl
+
+# Test application functionality
 use strict;
 use warnings;
 use Test::More tests => 1;
@@ -10,7 +9,13 @@ use <tmpl_var main_module>;
 
 my $mech = Test::WWW::Mechanize::CGIApp->new;
 
-$mech->app('<tmpl_var main_module>');
+$mech->app(
+    sub {
+        my $app = <tmpl_var main_module>->new(PARAMS => {
 
-$mech->get_ok();
+        });
+        $app->run();
+    }
+);
 
+$mech->get_ok(q{/});

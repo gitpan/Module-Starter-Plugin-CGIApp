@@ -1,7 +1,6 @@
-#!perl
-#
-# $Id: 00-signature.t 52 2009-01-06 03:22:31Z jaldhar $
-#
+#!/usr/bin/perl
+
+# Test if the modules signature is valid.
 use warnings;
 use strict;
 use Test::More tests => 1;

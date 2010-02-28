@@ -1,7 +1,6 @@
-#!perl -T
-#
-# $Id: 01-load.t 1 2008-03-23 13:38:20Z jaldhar $
-#
+#!/usr/bin/perl
+
+# Test to see if the module loads correctly.
 use warnings;
 use strict;
 use Test::More tests => 1;
