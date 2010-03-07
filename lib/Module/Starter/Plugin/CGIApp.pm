@@ -30,16 +30,17 @@ use English qw( -no_match_vars );
 use File::Basename;
 use File::Path qw( mkpath );
 use File::Spec ();
+use Module::Starter::BuilderSet;
 use Module::Starter::Simple;
 use HTML::Template;
 
 =head1 VERSION
 
-Version 0.22
+Version 0.30
 
 =cut
 
-our $VERSION = '0.22';
+our $VERSION = '0.30';
 
 =head1 DESCRIPTION
 
@@ -81,16 +82,26 @@ sub create_distro {
 
     my $self = $class->new(@opts);
 
-    my @modules = map { split /,/msx } @{ $self->{modules} };
+    # Supposedly the *-starter scripts can handle multiple --builder options
+    # but this doesn't work (and IMO doesn't make sense anyway.) So in the
+    # case multiple builders were specified, we just pick the first one.
+    if ( ref $self->{builder} eq 'ARRAY' ) {
+        $self->{builder} = $self->{builder}->[0];
+    }
 
+    my @modules;
+    foreach my $arg ( @{ $self->{modules} } ) {
+        push @modules, ( split /[,]/msx, $arg );
+    }
     if ( !@modules ) {
         croak "No modules specified.\n";
     }
     for (@modules) {
-        if ( !/\A[[:alpha:]_]\w*(?:::[\w]+)*\Z/imsx ) {
+        if ( !/\A [[:alpha:]_] \w* (?: [:] [:] [\w]+ )* \Z /imsx ) {
             croak "Invalid module name: $_";
         }
     }
+    $self->{modules} = \@modules;
 
     if ( !$self->{author} ) {
         croak "Must specify an author\n";
@@ -115,9 +126,9 @@ sub create_distro {
     $self->{templatedir} = join q{/}, ( 'lib', @distroparts, 'templates' );
 
     my @files;
-    push @files, $self->create_modules(@modules);
+    push @files, $self->create_modules( @{ $self->{modules} } );
 
-    push @files, $self->create_t(@modules);
+    push @files, $self->create_t( @{ $self->{modules} } );
     push @files, $self->create_tmpl();
     my %build_results = $self->create_build();
     push @files, @{ $build_results{files} };
@@ -168,6 +179,28 @@ sub create_MANIFEST_SKIP {    ## no critic 'NamingConventions::Capitalization'
     return 'MANIFEST.SKIP';
 }
 
+=head2 create_modules( @modules )
+
+This method will create a starter module file for each module named in 
+I<@modules>.  It is only subclassed from L<Module::Starter::Simple> here 
+so we can change the I<rtname> tmpl_var to be the distro name instead of 
+the module name.
+
+=cut
+
+sub create_modules {
+    my ( $self, @modules ) = @_;
+
+    my @files;
+
+    my $rtname = lc $self->{distro};
+    for my $module (@modules) {
+        push @files, $self->_create_module( $module, $rtname );
+    }
+
+    return @files;
+}
+
 =head2 create_perlcriticrc( )
 
 This method creates a C<perlcriticrc> in the distribution's test directory so 
@@ -216,7 +249,7 @@ in the distribution.
 =cut
 
 sub create_t {
-    my ( $self, @modules ) = shift;
+    my ( $self, @modules ) = @_;
 
     my %t_files = $self->t_guts(@modules);
 
@@ -295,6 +328,8 @@ sub render {
     $opts{year}          = $self->_thisyear();
     $opts{license_blurb} = $self->_license_blurb();
     $opts{datetime}      = scalar localtime;
+    $opts{buildscript} =
+      Module::Starter::BuilderSet->new()->file_for_builder( $self->{builder} );
 
     foreach my $key ( keys %{$self} ) {
         next if defined $opts{$key};

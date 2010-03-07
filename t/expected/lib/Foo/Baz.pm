@@ -1,30 +1,30 @@
 
 =head1 NAME
 
-<tmpl_var module> - The great new <tmpl_var module> web application!
+Foo::Baz - The great new Foo::Baz web application!
 
 =head1 SYNOPSIS
 
-    use <tmpl_var module>;
-    my $app = <tmpl_var module>->new();
+    use Foo::Baz;
+    my $app = Foo::Baz->new();
     $app->run();
 
 =head1 ABSTRACT
 
-A brief summary of what <tmpl_var module> does.
+A brief summary of what Foo::Baz does.
 
 =cut
 
-package <tmpl_var module>;
+package Foo::Baz;
 
 use warnings;
 use strict;
-use base 'Titanium';
+use base 'CGI::Application';
 use Carp qw( croak );
 
 =head1 VERSION
 
-This document describes <tmpl_var module> Version 0.01
+This document describes Foo::Baz Version 0.01
 
 =cut
 
@@ -33,7 +33,7 @@ our $VERSION = '0.01';
 =head1 DESCRIPTION
 
 Overview of functionality and purpose of
-web application module <tmpl_var module>...
+web application module Foo::Baz...
 
 =head1 METHODS
 
@@ -55,7 +55,7 @@ sub setup {
     $self->error_mode('runmode1');
     $self->run_modes( [qw/ runmode1 /] );
     if ( !$self->tmpl_path ) {
-        ( my $tp = '<tmpl_var distro>' ) =~ s{-}{/}gmsx;
+        ( my $tp = 'Example-Dist' ) =~ s{-}{/}gmsx;
         $tp .= '/templates';
         foreach my $inc (@INC) {
             if ( -d "$inc/$tp" ) {
@@ -70,7 +70,7 @@ sub setup {
 
 =pod
 
-TODO: Other methods inherited from Titanium go here.
+TODO: Other methods inherited from CGI::Application go here.
 
 =head2 RUN MODES
 
@@ -123,14 +123,14 @@ TODO: Other methods in your public interface go here.
 There are no known problems with this module.
 
 Please report any bugs or feature requests to
-C<bug-<tmpl_var rtname> at rt.cpan.org>, or through the web interface at
-L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=<tmpl_var distro>>.
+C<bug-example-dist at rt.cpan.org>, or through the web interface at
+L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Example-Dist>.
 I will be notified, and then you'll automatically be notified of progress on
 your bug as I make changes.
 
 =head1 SEE ALSO
 
-L<Titanium>
+L<CGI::Application>
 
 =head1 THANKS
 
@@ -138,19 +138,25 @@ List acknowledgements here or delete this section.
 
 =head1 AUTHOR
 
-<tmpl_var author>, C<< <<tmpl_var email_obfuscated>> >>
+Jaldhar H. Vyas, C<< <jaldhar at braincells.com> >>
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright <tmpl_var year> <tmpl_var author>, all rights reserved.
+Copyright 2010 Jaldhar H. Vyas, all rights reserved.
 
-<tmpl_var license_blurb>
+This distribution is free software; you can redistribute it and/or modify it
+under the terms of either:
+
+a) the GNU General Public License as published by the Free Software
+Foundation; either version 2, or (at your option) any later version, or
+
+b) the Artistic License version 2.0.
 
 The full text of the license can be found in the LICENSE file included
 with this distribution.
 
 =cut
 
-1;    # End of <tmpl_var module>
+1;    # End of Foo::Baz
 
 __END__
