@@ -14,16 +14,16 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 6e25d963f852e799a688742ac324680d80ba53fc Build.PL
-SHA1 66b50a49d6b1329e145b5033ae060b88f76aecad Changes
-SHA1 fedb35c1f5f3acb692e312c6f31252636d6cc899 LICENSE
+SHA1 5eab8c5d47b8a912ac546d49a77d73ce6282152a Build.PL
+SHA1 be14e476da495ba17acb13da7450d77831e86889 Changes
+SHA1 3d9c1feaff4b3789fdf1fddf463e4ca539f404b1 LICENSE
 SHA1 c242b56bd57ae3cd2eaeff7cd3d31e018706f8a0 MANIFEST
 SHA1 9d10f94124fcae34e9a7500cde4565a11be1621e MANIFEST.SKIP
-SHA1 cf9a660e9935b5295a0802f3e6cf624afa09e752 META.json
-SHA1 bb5008456681615d5e0f0c95f02cc3d48208cc99 META.yml
+SHA1 234a7eda7a43fb728a801bcfe904200aa1140e3b META.json
+SHA1 dc626d4c57fcaec190c29f6ac55082b4dd8b725e META.yml
 SHA1 675aec60b47e9d8036621ece1c9dcdbbad22c794 Makefile.PL
-SHA1 bb63fb1d23a4e2c707521b41cbf6b80e74b2ffc2 README
-SHA1 54e90683b60129ae3437f10b5709c459fc71d065 lib/Module/Starter/Plugin/CGIApp.pm
+SHA1 18e28eb81eb934237bc564586babedd51c2e1bf9 README
+SHA1 dc6c6cc311f6cefa98f461354e543a179c5ee742 lib/Module/Starter/Plugin/CGIApp.pm
 SHA1 6ca6aced83f25d942129c0e69d0b4dd21fe5ddfa script/cgiapp-starter
 SHA1 cfbb033f0a37cc1e8542404a01b6e25483c79416 script/titanium-starter
 SHA1 8a0a63e135ba8bcbab4744aab395fe27faf537a7 share/default/00-signature.t
@@ -69,13 +69,13 @@ SHA1 d766ad7320334c1280ab24f6c8ac51fb64031d40 t/01-load.t
 SHA1 900da08cf6dd1cdce2465c91147450d0f5971c7c t/common.pm
 SHA1 50c959f4e13b5003d21c3ec18453a76a65db7dac t/eumm/MANIFEST
 SHA1 afc544ce1d32dbb171d6a529152885d9bccc5248 t/eumm/Makefile.PL
-SHA1 f78bbddb2992d0d3f96d5bf04dca8469b1afcab8 t/eumm/README
+SHA1 f6ba525ca859444b94e53b55b9bb86554c75adf5 t/eumm/README
 SHA1 abe76c767641ac56f0a1e79f6e7c3fa264f52d1c t/eumm/t/boilerplate.t
 SHA1 24b61c542fb84aa072f96b565c9dd379ea5f7c29 t/expected/Changes
-SHA1 d5552072e391b02788c7412c9c6fe162ebe14169 t/expected/LICENSE
+SHA1 e3569e482a26ad33b319dae4e515fbddc5993ef0 t/expected/LICENSE
 SHA1 b1e0b8ac5a4d3f5d21c5d8608f4cca5fc140bdcc t/expected/MANIFEST.SKIP
-SHA1 cb29e59587f21d38431700fd3a03b35a964dbb51 t/expected/lib/Foo/Bar.pm
-SHA1 30cec739993cc11eab74ac57a6c9d901fe0d5475 t/expected/lib/Foo/Baz.pm
+SHA1 0aca80bf7eb75087b9ae8c9563cbb0f6c0a8d261 t/expected/lib/Foo/Bar.pm
+SHA1 dd544a6a552a4ad19ec3591d0d3193decd753e23 t/expected/lib/Foo/Baz.pm
 SHA1 98a53f79544711343be3d2a24ef17ceb722958ab t/expected/server.pl
 SHA1 d63e698e19b436569a4bb12343e59f9d85d34cc2 t/expected/share/templates/runmode1.html
 SHA1 8a0a63e135ba8bcbab4744aab395fe27faf537a7 t/expected/t/00-signature.t
@@ -89,11 +89,11 @@ SHA1 8a96ca5f326b34853dbb19b6dcf1c68f05d14ddb t/expected/xt/pod.t
 SHA1 08dc31e52c4bf5ed29cd083134c152e457a2a686 t/extutils-makemaker.t
 SHA1 3538acda10538075f49d4597738b5a336ac894d4 t/mb/Build.PL
 SHA1 f6651cc4ca7cf7eae9cebede5b85d33ce3221c90 t/mb/MANIFEST
-SHA1 75708ad9536864c384d63f7482e00d0faa0a5dff t/mb/README
+SHA1 ca9e4671972189d3024a65248f69bc20a0ab9861 t/mb/README
 SHA1 d9343608d8651382dbfe03275d7d63d43d86793b t/mb/t/boilerplate.t
 SHA1 50c959f4e13b5003d21c3ec18453a76a65db7dac t/mi/MANIFEST
 SHA1 e94e11975b58787610556d5b6f74da75419b8ba7 t/mi/Makefile.PL
-SHA1 f78bbddb2992d0d3f96d5bf04dca8469b1afcab8 t/mi/README
+SHA1 f6ba525ca859444b94e53b55b9bb86554c75adf5 t/mi/README
 SHA1 abe76c767641ac56f0a1e79f6e7c3fa264f52d1c t/mi/t/boilerplate.t
 SHA1 5f51feea37852a2d858469da395fb254808a4acd t/module-build.t
 SHA1 8124b54339dce05e47bc2b25fd40566b818017c1 t/module-install.t
@@ -109,7 +109,7 @@ SHA1 8a96ca5f326b34853dbb19b6dcf1c68f05d14ddb xt/pod.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.11 (GNU/Linux)
 
-iEYEARECAAYFAk+sj3IACgkQIN9eM6kfjrq6awCgmTxigj+Iq5q1ZyxShtKhtKz2
-L24An0cTuiu6x2/AoJWjDG+9xU2k8Ayx
-=+4lx
+iEYEARECAAYFAk+0NugACgkQIN9eM6kfjroSwACfb0mGRsKTzsRtrVROOsYlyEP8
+ryMAoI0SMwbMocwqiipZpT66tSkOj76i
+=PUml
 -----END PGP SIGNATURE-----
